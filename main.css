@@ -1,0 +1,418 @@
+/* Colores personalizados */
+:root {
+    --color-primary: #464545;
+    --color-secondary: #e6e4dc;
+    --color-accent: #D98977;
+    --color-highlight: #BF1E0F;
+    --color-dark-accent: #BF3F34;
+}
+
+/* General */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--color-primary);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra sutil */
+}
+
+.navbar-brand img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+.nav-pills .nav-link {
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--color-highlight); /* Resalta el texto al pasar el ratón */
+    background-color: var(--color-accent); /* Fondo de la pestaña activa */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--color-highlight);
+    color: white;
+    border-radius: 50px;
+}
+
+#inicio {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+#inicio p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+#inicio button {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#inicio button:hover {
+    background-color: var(--color-dark-accent);
+    transform: scale(1.05);
+}
+
+/* En móviles */
+@media (max-width: 768px) {
+    #inicio h1 {
+        font-size: 2.5rem;
+    }
+    #inicio p {
+        font-size: 1.125rem;
+    }
+    #inicio button {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-secondary); /* Fondo suave para destacar las imágenes */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+}
+
+/* Imágenes del carrusel */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    max-height: 600px; /* Mayor altura para que las imágenes tengan más presencia */
+    transition: transform 0.3s ease; /* Transición suave cuando se aplica el hover */
+}
+
+/* Efecto de enfoque en la imagen */
+.carousel-inner img:hover {
+    transform: scale(1.05); /* Le da un ligero zoom a la imagen al pasar el ratón */
+}
+
+/* Controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 0;
+    transition: transform 0.3s ease; /* Transiciones suaves */
+    cursor: pointer;
+}
+
+/* Efecto al pasar el ratón sobre los controles */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del control al hacer hover */
+}
+
+/* Iconos de los controles */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%); /* Asegura que los iconos sean blancos */
+    font-size: 1.5rem; /* Aumenta el tamaño de los iconos */
+}
+
+/* Estilo para los controles en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 450px; /* Reducir el tamaño de las imágenes en pantallas más pequeñas */
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        padding: 0.75rem; /* Reducir el tamaño de los controles en dispositivos pequeños */
+        font-size: 1.25rem; /* Reducir el tamaño de los iconos en pantallas pequeñas */
+    }
+}
+
+/* Sección de Categorías del Menú */
+#menu {
+    padding: 4rem 2rem;
+    background-color: var(--color-secondary);
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+/* Estilo para los botones del acordeón */
+.accordion-button {
+    background-color: var(--color-primary);
+    color: white;
+    border: 1px solid var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: var(--color-accent);
+    color: white;
+    transform: scale(1.05); /* Aumento suave */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Estilo para el contenido del acordeón */
+.accordion-body {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo de las listas dentro del acordeón */
+.accordion-body ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.accordion-body ul li {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.accordion-body ul li:last-child {
+    border-bottom: none;
+}
+
+/* Sombra sutil y bordes redondeados para el acordeón */
+.accordion-item {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    #menu h2 {
+        font-size: 2rem;
+    }
+
+    .accordion-button {
+        padding: 1rem 1.2rem;
+    }
+
+    .accordion-body {
+        font-size: 1rem;
+        padding: 1.2rem 1.5rem;
+    }
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: var(--color-secondary);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#testimonios h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Carrusel de testimonios */
+.carousel {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-secondary);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 4px solid var(--color-highlight);
+    padding-left: 1.5rem;
+}
+
+blockquote footer {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-dark-accent);
+    text-transform: uppercase;
+}
+
+/* Estilo para los controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    border: none;
+    background-color: transparent;
+    padding: 1.5rem;
+    z-index: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de los controles al pasar el ratón */
+}
+
+/* Iconos de los controles */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+    font-size: 2rem;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    #testimonios h2 {
+        font-size: 2rem;
+    }
+
+    blockquote {
+        font-size: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        padding: 1rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Sección de Reservaciones */
+#reservaciones {
+    background-color: var(--color-secondary);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#reservaciones h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Campos de entrada */
+.form-label {
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-accent);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-highlight);
+    box-shadow: 0 0 5px rgba(191, 30, 15, 0.3); /* Efecto de enfoque */
+}
+
+/* Estilo para el botón de enviar */
+button[type="submit"] {
+    background-color: var(--color-highlight);
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    #reservaciones h2 {
+        font-size: 2rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 0.95rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
